@@ -20,7 +20,7 @@ let package = Package(
         .package(url: "https://github.com/swiftlang/swift-syntax", "509.0.0" ..< "603.0.0-prerelease"),
         .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.17.0"),
         .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.0.0"),
-        .package(url: "https://github.com/jpsim/Yams", from: "5.3.1")
+        .package(url: "https://github.com/jpsim/Yams", from: "6.0.0")
     ],
     targets: [
         .target(
