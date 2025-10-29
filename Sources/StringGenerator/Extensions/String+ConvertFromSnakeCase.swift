@@ -30,12 +30,12 @@ fileprivate func convertFromSnakeCase(_ stringKey: String) -> String {
     let joinedString: String
     if components.count == 1 {
         // No underscores in key, leave the word as is - maybe already camel cased
-        joinedString = String(stringKey[keyRange])
+        joinedString = String(stringKey[keyRange]).lowercased()
     } else {
         // Create a camel cased join with components as-is, i.e. don't lowercase them before joining
         joinedString = ([String(components[0])] + components[1...].map {
             guard let first = $0.unicodeScalars.first else { return String($0) }
-            return String(first).uppercased() + String($0.unicodeScalars.dropFirst())
+            return String(first).uppercased() + String($0.unicodeScalars.dropFirst()).lowercased()
         }).joined()
     }
 
