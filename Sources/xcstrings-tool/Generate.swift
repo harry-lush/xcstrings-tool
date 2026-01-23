@@ -170,7 +170,7 @@ struct Generate: ParsableCommand {
                 for: resources,
                 tableName: input.tableName,
                 accessLevel: configuration.accessLevel,
-                convertFromSnakeCase: configuration.convertFromSnakeCase,
+                convertFromSnakeCase: true,
                 importsUseExplicitAccessLevel: configuration.importsUseExplicitAccessLevel
             )
         }
