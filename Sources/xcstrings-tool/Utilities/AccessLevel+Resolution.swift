@@ -32,7 +32,11 @@ extension AccessLevel {
 }
 
 #if compiler(>=6.0)
-extension AccessLevel: @retroactive ArgumentParser.ExpressibleByArgument {}
+    #if compiler(<6.2)
+    extension AccessLevel: @retroactive ArgumentParser.ExpressibleByArgument {}
+    #else
+    extension AccessLevel: ExpressibleByArgument {}
+    #endif
 #else
 extension AccessLevel: ExpressibleByArgument {}
 #endif
